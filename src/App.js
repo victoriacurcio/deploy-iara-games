@@ -34,29 +34,39 @@ function App() {
   }
 
   return (
-    <div className="app-container">
-      <div className="login-card">
-        <h2>Fazer Login</h2>
-        <form onSubmit={handleLogin}>
-          <input
-            type="text"
-            placeholder="@username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Senha (8 dígitos)"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button type="submit" disabled={loading}>
-            {loading ? "Validando..." : "Entrar"}
-          </button>
-        </form>
-        {error && <p className="error">{error}</p>}
+    <div className="split-screen">
+      <div className="left-panel">
+        <div className="login-card">
+          <h2>Iara Games</h2>
+          <p>Entre na sua conta</p>
+          <form onSubmit={handleLogin}>
+            <input
+              type="text"
+              placeholder="@username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Senha (8 dígitos)"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button type="submit" disabled={loading}>
+              {loading ? "Validando..." : "Entrar"}
+            </button>
+          </form>
+          {error && <p className="error">{error}</p>}
+        </div>
+      </div>
+
+      <div className="right-panel">
+        <img
+          src="https://cdn.pixabay.com/photo/2023/01/25/17/16/portal-7741717_1280.jpg"
+          alt="Portal Iara Games"
+        />
       </div>
     </div>
   );
