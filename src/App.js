@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { mockLogin } from "./mockApi";
 import "./App.css";
+import portalImg from "./iara-login.png"; // ✅ importa a imagem local
 
 function App() {
   const [username, setUsername] = useState("");
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div className="split-screen">
+      {/* Painel esquerdo - Login */}
       <div className="left-panel">
         <div className="login-card">
           <h2>Iara Games</h2>
@@ -62,17 +64,17 @@ function App() {
         </div>
       </div>
 
+      {/* Painel direito - Imagem */}
       <div className="right-panel">
-        <img
-          src=".src/iara-login.png"
-          alt="Portal Iara Games"
-        />
+        <img src={portalImg} alt="Portal Iara Games" />
       </div>
     </div>
   );
 }
 
 export default App;
+
+
 
 
 
