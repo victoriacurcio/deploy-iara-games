@@ -64,7 +64,7 @@ function App() {
 
       <div className="right-panel">
         <img
-          src="src/iara-login.png"
+          src=".src/iara-login.png"
           alt="Portal Iara Games"
         />
       </div>
@@ -73,5 +73,6 @@ function App() {
 }
 
 export default App;
+
 
 
